@@ -2,60 +2,147 @@
 
 <html>
     <head>
-        <title>My Nikka</title>
+        <title>Nikah101</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link href="img/mynikka.jpg" rel="shortcut icon">
-        <link rel="stylesheet" href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="css/my-nikka.css"/>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
         <script src="js/my-nikka.js"></script>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-88088383-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+        <style>
+            .imageButton {
+                cursor: pointer;
+                margin-left: 5px;
+                padding: 5px 5px 5px 5px;
+            }
+
+            .imageButton:hover {
+                background: #fff;
+            }
+
+            img {
+                width: 257px;
+                display: block;
+                margin: auto;
+            }
+
+            [class*="col-"] {
+                margin-bottom: 15px;
+            }
+
+            .btn-info {
+                display: block;
+                margin: auto;
+            }
+        </style>
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        	<div class="container">
-				<div class="navbar-collapse collapse" id="navbar">
-		        </div>
-        	</div>
-        </nav>
-
-        <div class="jumbotron">
-		    <div class="container">
-			    <h1>MY NIKKA</h1>
-			    <p>"This is where our catchy tagline would be"</p>
-		    </div>
-       	</div>
-
-       	<div class="container">
-	        <div class="row">
-		        <div class="col-md-4">
-			        <div onclick="location.href='pre_marriage.html';" style="cursor: pointer;">
-			            <h2>Pre-Marriage</h2>
-			            <img src="./img/pre-marriage-thumbnail.png"/>
-		            </div>
-		            <p>"Taking you from 'I think I want to get married' to 'I found someone!'"</p>
-		        </div>
-		            
-		        <div class="col-md-4">
-		        	<div onclick="location.href='getting_married.html';" style="cursor: pointer;">
-			            <h2>Getting Married</h2>
-			            <div style="height: 300px">
-			            	<img src="./img/rings-thumbnail.png"/>
-			            </div>
-		            </div>
-		            <p>"I found 'the one' but how do we make things official?"</p>
-		        </div>
-		        
-		        <div class="col-md-4">
-		            <div onclick="location.href='married_life.html';" style="cursor: pointer;">
-			            <h2>Married Life</h2>
-			            <img src="./img/married-life-thumbnail.png" />
-		            </div>
-		            <p>"How do we make sure this marriage leads us to Paradise and not Hell?"</p>
-		        </div>
-	        </div>
+        <div id="header">
+            <nav class="navbar navbar-expand-md navbar-light bg-faded">
+                <div class="container">
+                    <button class="navbar-toggler navbar-toggler-left collapsed" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html#">Nikah 101</a>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link active" href="index.html#" id="index">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link" href="pre_marriage.html#" id="pre_marriage">Pre-Marriage</a>
+                            <a class="nav-item nav-link" href="getting_married.html#" id="getting_married">Getting Married</a>
+                            <a class="nav-item nav-link" href="married_life.html#" id="married_life">Married Life</a>
+                            <a class="nav-item nav-link" href="testimonials.html#" id="testimonials">Testimonials</a>
+                            <a class="nav-item nav-link" href="faq.html#" id="faq">FAQ</a>
+                            <!-- <form class="form-inline my-2 my-lg-0"> -->
+                                <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search"></input> -->
+                                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+                            <!-- </form> -->
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
+        <div class="jumbotron" style="background: transparent;">
+            <div class="container">
+                <h1>Nikah 101</h1>
+                <p>Your Muslim Marriage Guide: From "Am I ready?" to "Will you marry me?" and beyond</p>
+            </div>
+           </div>
+
+           <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <div onclick="location.href='pre_marriage.html';" class="imageButton">
+                        <h2>Pre-Marriage</h2>
+                        <img src="./img/pre-marriage-thumbnail.png"/>
+                        <p>"Taking you from 'I think I want to get married' to 'I found someone!'"</p>
+                        <button type="button" class="btn btn-info">Learn more</button>
+                    </div>
+                </div>
+                    
+                <div class="col-md">
+                    <div onclick="location.href='getting_married.html';" class="imageButton">
+                        <h2>Getting Married</h2>
+                        <img src="./img/rings-thumbnail.png"/>
+                        <p>"I found 'the one' but how do we make things official?"</p>
+                        <button type="button" class="btn btn-info">Learn more</button>
+                    </div>
+                </div>
+                
+                <div class="col-md">
+                    <div onclick="location.href='married_life.html';" class="imageButton">
+                        <h2>Married Life</h2>
+                        <img src="./img/married-life-thumbnail.png" />
+                        <p>"How do we make sure this marriage leads us to Paradise and not Hell?"</p>
+                        <button type="button" class="btn btn-info">Learn more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-top:20px">
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <span>
+                        <a href="#" data-toggle="modal" data-target="#myModal">
+                            Contact us
+                        </a>
+                        &nbsp;|&nbsp;
+                        <a href="https://www.istikhara.com" target="_blank">Learn about Istikhara</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document" style="width: 700px; height: 800px">
+                <div class="modal-content" style="width: 700px; height: 800px">
+                    <div class="modal-header">
+                         <h5 class="modal-title" id="exampleModalLabel">Contact us</h5>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                         </button>
+                    </div>
+                    <div class="modal-body" style="width: 700px; height: 800px">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc_yMpv1Eu6rRGOCCxYk3gl6i0qDisfoZ84bRCxH-J7JMFKTg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" width="650px" height="700px">Loading...</iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>
