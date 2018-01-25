@@ -20,8 +20,9 @@ function populate_page(page_json, target_heading) {
 				for (var subheading_num in _phase.subheadings) {
 					_subheading = _phase.subheadings[subheading_num];
 
-					content_dom += "<div><div><h4>"
-									+ _subheading.subheading
+					content_dom += "<div><div>"
+									+ "<h3>Section " + (parseInt(subheading_num) + 1) + ":</h3>"
+					                +"<h4>" + _subheading.subheading
 									+ "<br><em>" + _subheading.subheading_description + "</em>"
 								+ "</h4></div>"
 								+ "<div>";
@@ -33,8 +34,13 @@ function populate_page(page_json, target_heading) {
 
 						if (_link.link.includes("youtube.com")) {
 							content_dom += "<div class='container link_section " + (stripe ? "stripe" : "") + "'>"
-										+ "<div class='row'><a class='links' href='" + _link.link + "' target='_blank'><i class='fa fa-youtube-play' aria-hidden='true'></i>&nbsp;<span class='link_text'>" + _link.name + "</span></a></div>"
+										+ "<div class='row'><a data-toggle='collapse'  href='#link" + link_id + "'><i class='fa fa-youtube-play' aria-hidden='true'></i>&nbsp;<span class='link_text'>" + _link.name + "</span></a></div>"
 										+ "<div class='row'><em>" + _link.description + "</em></div>"
+										+ "<div class='row'>"
+											+ "<div id='link" + link_id + "' class='panel-collapse collapse'>"
+												+ "<iframe src='" + convertYoutubeWatchUrlToEmbedUrl(_link.link) + "' width='560' height='315' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
+											+ "</div>"
+										+ "</div>"
 									+ "</div>";
 						} else {
 							content_dom += "<div class='container link_section " + (stripe ? "stripe" : "") + "'>"
@@ -54,4 +60,25 @@ function populate_page(page_json, target_heading) {
 	}
 
 	$("#content_container").html(content_dom);
+}
+
+function convertYoutubeWatchUrlToEmbedUrl(watchUrl) {
+    return "https://www.youtube.com/embed/" + getYoutubeIdFromWatchUrl(watchUrl);
+}
+
+function getYoutubeIdFromWatchUrl(watchUrl) {
+	var splitOn = '';
+
+	if (watchUrl.indexOf('v=') > -1)
+		splitOn = 'v=';
+	else if (watchUrl.indexOf('list=') > -1)
+		splitOn = 'list=';
+
+	var videoId = watchUrl.split(splitOn)[1];
+    var ampersandPosition = videoId.indexOf('&') > -1 ? videoId.indexOf('&') : videoId.length;
+    if(ampersandPosition != -1) {
+      videoId = videoId.substring(0, ampersandPosition);
+    }    
+
+    return videoId;
 }
