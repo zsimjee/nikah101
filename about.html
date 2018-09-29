@@ -2,31 +2,46 @@
 
 <html>
     <head>
-        <title>About My Nikkas</title>
+        <title>About My Nikka</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link href="images/mynikka.jpg" rel="shortcut icon">
+        <link href="img/mynikka.jpg" rel="shortcut icon">
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/my-nikka.css"/>
         <script src="js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="js/my-nikka.js"></script>
+        <script src="js/header-injector.js"></script>
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-88088383-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
     </head>
     <body>
-        <nav class="collapse navbar-collapse" id="navbar"></nav>
+        <div id="header"></div>
+
+        <div class='container beneath-nav'>
+            <h1>Who are we?</h1>
         
-        <h1>Who are we?</h1>
-        
-        <p style="width:90vw; margin:auto; text-align:center;">We are a conglomerate of many like-minded individuals. Two are married, one is a bum in college, and the other is the head of an 
-        illustrious MSA looking for a spouse (but in the most
-        halal way, mashAllah, mashAllah). We're pretty smart and know pretty much everything
-        there is to know of marriage, so, you know, use this site wisely cause it's cool.</p>
-        
-        <h1>Ok, but why did you even make this?</h1>
-        
-        <p style="width:90vw; margin:auto; text-align:center;">It's kinda tough these days to find yourself a place that has 
-        ALL the info you need on every step in this 
-        process, and we needed some sadaqah jariyah. These two needs came together to become something beautiful.</p>
+            <p>We are a conglomerate of many like-minded individuals. Two are married, one is a bum in college, and the other is the head of an 
+            illustrious MSA looking for a spouse (but in the most
+            halal way, mashAllah, mashAllah). We're pretty smart and know pretty much everything
+            there is to know of marriage, so, you know, use this site wisely cause it's cool.</p>
+            
+            <h1>Ok, but why did you even make this?</h1>
+            
+            <p>It's kinda tough these days to find yourself a place that has 
+            ALL the info you need on every step in this 
+            process, and we needed some sadaqah jariyah. These two needs came together to become something beautiful.</p>
+        </div>
         
     </body>
 </html>
