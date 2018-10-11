@@ -40,7 +40,6 @@ function parsePhase(_phase, phase_num) {
 
 function parseSubheading(_subheading, phase_num, subheading_num) {
 	subheading_dom = "<div><div>"
-					+ "<h3>Section " + (parseInt(subheading_num) + 1) + ":</h3>"
 					+"<h4>" + _subheading.subheading
 					+ "<br><em>" + _subheading.subheading_description + "</em>"
 				+ "</h4></div>"
