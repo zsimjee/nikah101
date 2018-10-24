@@ -78,7 +78,7 @@ function parseLink(_link, phase_num, subheading_num, link_num, stripe) {
 
 function convertYoutubeWatchUrlToEmbedUrl(watchUrl) {
     if (watchUrl.includes("list=")) {
-        return "https://www.youtube.com/embed/videoseries?list=";
+        return "https://www.youtube.com/embed/videoseries?list=" + getYoutubeIdFromWatchUrl(watchUrl);
     }
     return "https://www.youtube.com/embed/" + getYoutubeIdFromWatchUrl(watchUrl);
 }
