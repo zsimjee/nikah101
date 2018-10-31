@@ -2,7 +2,7 @@ $(document).ready(function() {
     //populate info pages
     if (getCurrentPage().startsWith("getting_married.html") || getCurrentPage().startsWith("pre_marriage.html") || getCurrentPage().startsWith("married_life.html")) {
         $('body').html("<div id='header'></div><div id='content_container' class='container beneath_nav' style='margin-bottom:30px;'/><div id='footer'></div>");
-        
+
         var toFetch = "";
         if (getCurrentPage().startsWith("getting_married.html"))
             toFetch = "Getting Married";
