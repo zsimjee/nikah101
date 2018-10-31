@@ -80,6 +80,7 @@ function getSearchQuery(){
 }
 
 function highlightSearchTerms(search_json){
+  console.log("CALLLED")
   if (search_json.headings.length == 0)
       return search_json;
 

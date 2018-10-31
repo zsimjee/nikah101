@@ -19,8 +19,7 @@ $(document).ready(function() {
       $('body').html("<div id='header'></div><div id='content_container' class='container beneath_nav' style='margin-bottom:30px;'/><div id='footer'></div>");
 
       var toFetch = "Search";
-      console.log(getSearchResults());
-
+      
 
       populate_page(getSearchResults(), toFetch);
 
