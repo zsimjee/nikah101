@@ -8,8 +8,8 @@ function populate_page(page_json, target_heading) {
 }
 
 function parseHeading(_heading, target_heading) {
-	if (_heading.title == target_heading) {		
-		heading_dom = "<div class='container'><div class='row'>" 
+	if (_heading.title == target_heading) {
+		heading_dom = "<div class='container'><div class='row'>"
 						+ "<h1>" + _heading.title + "</h1>"
 						+ "<p>" + _heading.description + "</p>"
 					+ "</div><div class='row'>";
@@ -95,7 +95,7 @@ function getYoutubeIdFromWatchUrl(watchUrl) {
     var ampersandPosition = videoId.indexOf('&') > -1 ? videoId.indexOf('&') : videoId.length;
     if(ampersandPosition != -1) {
       videoId = videoId.substring(0, ampersandPosition);
-    }    
+    }
 
     return videoId;
 }

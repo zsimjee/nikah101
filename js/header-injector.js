@@ -11,7 +11,20 @@ $(document).ready(function() {
         else if (getCurrentPage().startsWith("married_life.html"))
             toFetch = "Married Life"
 
+
         populate_page(getWebsite(), toFetch);
+
+    }
+    else if (getCurrentPage().startsWith("search.html")){
+      $('body').html("<div id='header'></div><div id='content_container' class='container beneath_nav' style='margin-bottom:30px;'/><div id='footer'></div>");
+
+      var toFetch = "Search";
+      console.log(getSearchResults());
+
+
+      populate_page(getSearchResults(), toFetch);
+
+
     }
 
     $('#header').load("header.html", function() {
