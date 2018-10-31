@@ -1,9 +1,11 @@
 var site = getWebsite();
-var query = getSearchQuery().toLowerCase();
+var original_query = getSearchQuery();
+console.log(original_query);
+var query = original_query.toLowerCase();
 
 function getSearchResults(){
   var result = {"headings": new Array()};
-  var search_heading = {"title": "Search", "description": "<h1> - Results for your query: <mark><b>"+getSearchQuery()+"</b></mark><br><br></h1>",
+  var search_heading = {"title": "Search", "description": "<h1> -Results for your query: <mark><b>"+original_query+"</b></mark><br><br></h1>",
                         "phases": new Array()}
   for (var heading_num in site.headings){
     var temp = getHeadingData(site.headings[heading_num]);
@@ -75,13 +77,27 @@ function getSubheadingData(heading_title, subheading){
 function getSearchQuery(){
   var currentPage = window.location.href;
   currentPage.substring(currentPage.lastIndexOf("/") + 1);
-  return decodeURIComponent(currentPage.substring(currentPage.lastIndexOf("=")+1));
+  var decoded = decodeURIComponent(currentPage.substring(currentPage.lastIndexOf("=")+1));
+  var result = "";
+
+  var num = 0;
+  while (num < decoded.length){
+    if (decoded.substring(num, num + 1) == "+"){
+      result += " ";
+    }
+    else{
+      result += decoded.substring(num, num+1);
+    }
+    num++;
+
+  }
+
+  return result;
 
 }
 
 function highlightSearchTerms(search_json){
-  console.log("CALLLED")
-  if (search_json.headings.length == 0)
+  if (search_json.headings.length == 0 || query == "")
       return search_json;
 
   for (var p_num in search_json.headings[0].phases){
